@@ -5,7 +5,7 @@ use Mojo::Server;
 use Mojo::Pg;
 
 my $server = Mojo::Server->new;
-my $app = $server->load_app('./script/achievements');
+my $app = $server->load_app('./script/achievements'); 
 
 my $pg = Mojo::Pg->new($app->config->{db});
 ok $pg->db->ping, 'connected';
